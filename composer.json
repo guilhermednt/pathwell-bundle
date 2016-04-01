@@ -2,6 +2,7 @@
     "name": "guilhermednt/pathwell-bundle",
     "description": "Symfony Bundle implementing PathWell Topology password policy",
     "type": "symfony-bundle",
+    "license": ["GPL-3.0"],
     "authors": [
         {
             "name": "Guilherme Donato",
