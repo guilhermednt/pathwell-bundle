@@ -1,0 +1,13 @@
+parameters:
+    pathwell.topologies.class: Donato\PathWellBundle\Validator\DefaultPathWellTopologies
+
+services:
+    pathwell.topologies:
+        class: "%pathwell.topologies.class%"
+
+    pathwell.validator:
+        class: Donato\PathWellBundle\Validator\Constraints\PathWellValidator
+        arguments:
+            - "@pathwell.topologies"
+        tags:
+            - { name: validator.constraint_validator, alias: pathwell_validator }

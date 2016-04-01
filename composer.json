@@ -1,0 +1,15 @@
+{
+    "name": "guilhermednt/pathwell-bundle",
+    "description": "Symfony Bundle implementing PathWell Topology password policy",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Guilherme Donato",
+            "email": "guilhermednt@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.16",
+        "symfony/validator": "^3.0"
+    }
+}
