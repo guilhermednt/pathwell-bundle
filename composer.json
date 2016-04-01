@@ -11,6 +11,12 @@
     ],
     "require": {
         "php": ">=5.4.16",
-        "symfony/validator": ">=2.8"
+        "symfony/validator": ">=2.8",
+        "symfony/framework-bundle": ">=2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Donato\\PathWellBundle\\": ""
+        }
     }
 }
