@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-            ->booleanNode('enabled')->end()
+            ->booleanNode('enabled')->defaultFalse()->end()
             ->end();
 
         return $treeBuilder;
