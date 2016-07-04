@@ -17,18 +17,27 @@ class PathWellValidator extends ConstraintValidator
     /** @var  PathWellTopologiesInterface */
     private $topologies;
 
+    /** @var bool */
+    private $enabled;
+
     /**
      * PathWellValidator constructor.
      * @param PathWellTopologiesInterface $topologies
+     * @param bool $enabled
      */
-    public function __construct(PathWellTopologiesInterface $topologies)
+    public function __construct(PathWellTopologiesInterface $topologies, $enabled)
     {
         $this->topologies = $topologies;
+        $this->enabled = $enabled;
     }
 
     public function validate($value, Constraint $constraint)
     {
         if (!($constraint instanceof PathWell)) {
+            return;
+        }
+
+        if (false === $this->enabled) {
             return;
         }
 

@@ -9,5 +9,6 @@ services:
         class: Donato\PathWellBundle\Validator\Constraints\PathWellValidator
         arguments:
             - "@pathwell.topologies"
+            - "%donato_pathwell.enabled%"
         tags:
             - { name: validator.constraint_validator, alias: pathwell_validator }
